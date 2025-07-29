@@ -27,6 +27,12 @@ jobs:
         run: bun install
       - name: Build Pages
         run: bun run build
+        env:
+          VITE_API_BASE_URL: https://isitup.sh
+          VITE_BASE_URL: /isitup
+          VITE_GITHUB_REPOSITORY_URL: https://github.com/haydenk/isitup.sh
+          VITE_GITHUB_SPONSOR_URL: https://github.com/sponsors/haydenk
+          VITE_GA_ID: G-CMK8WGM35Z
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,6 +1,19 @@
 import './style.css'
 
+const isProd = import.meta.env.PROD;
+const gaId = import.meta.env.VITE_GA_ID;
 const form = document.querySelector('form') as HTMLFormElement;
+
+if (isProd) {
+  document.querySelector('head')?.prepend(`<script async src="https://www.googletagmanager.com/gtag/js?id=${gaId}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '${gaId}');
+      </script>`);
+}
 
 form?.addEventListener('submit', async (event) => {
   event.preventDefault()
