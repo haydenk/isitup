@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="Description" content="Is it up for you? Check if a site is working for everyone else of it is just you." />
+    <meta name="Keywords" content="up or not, up for everyone else, down or not, down or just me, website check, site down, server status, up or down, down right now" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://github.haydenk.io/isitup/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Is It Up?" />
+    <meta property="og:description" content="Is it up for you? Check if a site is working for everyone else of it is just you." />
     <title>Is It Up?</title>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
@@ -21,8 +27,9 @@
           <input 
               type="text"
               name="host"
-              placeholder="duckduckgo.com:443"
+              placeholder="duckduckgo.com"
               required
+              autocomplete="off"
           >
           <button type="submit">
             <span class="loading-spinner hidden"></span>
