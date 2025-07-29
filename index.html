@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is It Up?</title>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <div class="messages"></div>
+    <div class="gh-buttons">
+      <a class="github-button" href="https://github.com/sponsors/haydenk" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-heart" aria-label="Sponsor @haydenk on GitHub">Sponsor</a>
+      <a class="github-button" href="https://github.com/haydenk/isitup.sh" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true" aria-label="Star haydenk/isitup.sh on GitHub">Star</a>
+      <a class="github-button" href="https://github.com/haydenk/isitup.sh/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true" aria-label="Fork haydenk/isitup.sh on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/haydenk/isitup.sh" target="_blank" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" aria-label="View haydenk/isitup.sh on GitHub">View</a>
+    </div>
+    <div id="app">
+      <form class="form-container" method="post" action="http://localhost:8000">
+          <span>is</span>
+          <input 
+              type="text"
+              name="host"
+              placeholder="duckduckgo.com:443"
+              required
+          >
+          <button type="submit">
+            <span class="loading-spinner hidden"></span>
+            <span class="button-text">up?</span>
+          </button>
+      </form>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
